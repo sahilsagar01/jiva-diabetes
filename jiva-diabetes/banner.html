@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>circlehealth</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cedarville+Cursive&family=Handlee&family=Merriweather+Sans:ital@1&family=Montserrat:ital,wght@0,400;1,300&family=Patrick+Hand+SC&family=Poppins&family=Quicksand:wght@300&family=Spectral:wght@600&family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      
+
+  body{
+    margin: 0;
+    font-family:'Roboto';
+    font-size:10px;
+    height: 100vh;
+    overflow:scroll ;
+    font-family: 'Merriweather Sans', sans-serif;
+  }
+  p{
+    font-family: 'Montserrat', sans-serif;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background-image: url(./assets/bg.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    opacity: .3;
+    z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+
+.mainpage{
+  height: -webkit-fill-available;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .wrapper{
+    width: 80%;
+    height: 100vh;
+    margin-top: 10vh;
+    padding-bottom: 200px;
+  }
+/* header________________________ */
+  header{
+    width: 100%;
+    height: 3rem;
+    margin-top: 100px;
+  }
+  .company{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .cname{
+    font-size: large;
+    font-weight: 500;
+    color: #1d3868;
+    font-weight: 600;
+  }
+  .logoimg{
+    height: 45px;
+    padding: 8px;
+    border-radius: 5px;
+  }
+  .jivalogo{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .jivalogowrapper{
+    width: 300px;
+    height: 100px;
+  }
+  .jivalogo img{
+    width: 100%;
+    height: 100%;
+  }
+  #about{
+    padding-top: 1rem;
+    margin-top: 1rem;
+  }
+  .about h1{
+    text-align: left;
+    font-size: 1.5rem;
+    color: #1d3868;
+  }
+  .aboutContent h3{
+    font-weight: 400;
+    font-size: medium;
+    text-align: left;
+    letter-spacing: 1px;
+    line-height: 25px;
+    color: rgb(57, 56, 56);
+  }
+  #banner{
+    margin: 5px
+  }
+  .banner{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+  }
+  .banner img{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all ease-in-out 200ms;
+  }
+  .banner img:hover{
+    scale: 1.01;
+  }
+  #banner p{
+    font-weight: 400;
+    font-size: medium;
+    text-align: left;
+    letter-spacing: 1px;
+    line-height: 25px;
+  }
+  .banner_content{
+    border: 1px solid rgb(202, 198, 198);
+    margin: 2rem 0;
+    border-radius: 20px;
+    backdrop-filter: blur(2px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .banner_content_head{
+    padding: 1rem;
+    border-radius: 20px 20px 0 0;
+  }
+  #banner .banner_content_head h1{
+    padding: 0;
+    margin-top: 0;
+    color: #1d3868;
+    font-size: 1.5rem;
+  }
+  .banner_content_p{
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .banner_content_p_left{
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+  }
+  .banner_content_p_left ul{
+    font-size: 1.3rem;
+    color: #1d3868;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    height: 100%;
+  }
+  .banner_content_p_left ul li{
+    padding: 0px 10px 20px;
+  }
+  .banner_content_p_right{
+    width: 60%;
+  }
+  .diab{
+    filter: drop-shadow(rgb(5, 30, 56) 0px 3px 8px);
+    animation: moving 8s linear infinite alternate;
+  }
+  @keyframes moving{
+    0%{
+      transform: translateY(0);
+    }
+    33%{
+      transform: translateY(8px);
+    }
+    50%{
+      transform: translateY(-8px);
+    }
+    80%{
+      transform: translateY(8px);
+    }
+    100%{
+      transform: translateY(-8px); 
+    }
+  }
+  
+  .bookingtext{
+    text-align: left;
+    margin-top: 4rem;
+    font-size: 1.5rem;
+    color: #234e98;
+  }
+  #packege{
+    margin: 1rem 0;
+  }
+  .price{
+    min-height: 300px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+ 
+  .price h2{
+    color: #1d3868;
+    font-size: 2rem;
+    text-align: left;
+  }
+  .price h3{
+    color: #1d3868;
+    font-size: 1.4rem;
+    min-width: 300px;
+    text-align: left;
+  }
+  .price h3 span{
+    font-size: 1.5rem;
+  }
+  .price .leftCont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .price .rightCont img{
+    max-width: 500px;
+    width: 100%;
+  }
+.interested{
+    margin: 1rem 0;
+    padding: 1rem 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.interested #interestedButton{
+    padding: 12px 18px;
+    color: #fff;
+    background-color: #234e98;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    width: 50%;
+    min-width: 200px;
+    font-size: 1rem;
+  }
+  .interested #interestedButton a{
+    color: #fff;
+    text-decoration: none;
+    font-size: larger;
+}
+#interestedButton:hover{
+    background-color: #1d3868;
+    cursor: pointer;
+}
+#jivabtn{
+  color: #fff;
+  padding: 12px 18px;
+  background-color: #234e98;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  width: 30%;
+  min-width: 200px;
+}
+#jivabtn:hover{
+  background-color: #1d3868;
+  cursor: pointer;
+}
+#jivabtn a{
+  color: #fff;
+  text-decoration: none;
+  font-size: larger;
+}
+.priDis{
+  padding: 15px;
+  border-radius: 20px;
+}
+@media(max-width: 1050px){
+  .banner_content_p_left ul{
+    font-size: 1.2rem;
+  }
+  .banner_content_p_left ul li{
+    padding: 0px 10px 20px;
+  }
+  .banner_content_p_left{
+    width: 100%;
+  }
+  .banner_content_p_right{
+    width: 100%;
+  }
+}
+@media(max-width: 769px){
+  .interested{
+    justify-content: center;
+  }
+  .interested #interestedButton{
+    width: 60%;
+}
+#jivabtn{
+  width: 60%;
+}
+.bookingtext{
+  text-align: center;
+}
+
+}
+
+@media(max-width: 500px){
+    .wrapper{
+        width: 90%;
+      }
+    .logoimg{
+        height: 30px;
+        padding: 0px;
+        border-radius: 5px;
+        box-shadow: none;
+      }
+      .company{
+        gap: 6px;
+      }
+    
+      .jivalogo{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .jivalogowrapper{
+        width: 150px;
+        height: 50px;
+      }
+      .jivalogo img{
+        width: 100%;
+        height: 100%;
+      }
+      .aboutContent h3{
+        font-weight: 400;
+        font-size: medium;
+        text-align: justify;
+        letter-spacing: 0.8px;
+        line-height: 25px;
+      }
+      #banner p{
+        font-weight: 400;
+        font-size: medium;
+        text-align: justify;
+        letter-spacing: 1px;
+        line-height: 25px;
+      }
+      #banner h1{
+        text-align: left;
+        margin-top: 2rem;
+        font-size: 1.3rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+      }
+      #banner .banner_content_head h1{
+        text-align: left;
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+      }
+      .about h1{
+        text-align: left;
+        font-size: 1.3rem;
+        font: italic;
+      }
+      #packege h1{
+        text-align: left;
+        margin-top: 4rem;
+        font-size: 1.3rem;
+      }
+      
+      .interested #interestedButton{
+        width: 100%;
+    }
+    #jivabtn{
+      width: 100%;
+    }
+    .interested{
+      gap: 10px;
+    }
+    .bookingtext{
+      font-size: 1.2;
+    }
+}
+@media(max-width: 350px){
+  .priDis h2{
+    font-size: 1.5rem;
+  }
+  .price h3{
+    font-size: 1.2rem;
+    min-width: 100px;
+  }
+  
+}
+
+    </style>
+    <!-- fonts -->
+    <!-- <link rel="stylesheet" href="./banner.css" /> -->
+  </head>
+  <body>
+    <div class="mainpage">
+      <div class="wrapper">
+        <header>
+          <div class="company">
+            <div class="logo">
+              <a href="https://www.circlehealth.in/">
+              <img
+                class="logoimg"
+                src="https://circlehealth-assets.s3.ap-south-1.amazonaws.com/Circle+Health+Logo+-+Blue+(2).png"
+                alt="circle health logo"
+              />
+            </a>
+            </div>
+          </div>
+        </header>
+        <section id="about">
+          <div class="jivalogo">
+            <div class="jivalogowrapper">
+              <img
+                src="https://store.jiva.com/cdn/shop/files/Jiva-Ayurveda-TM-LOgo-new_large.png?v=1687006286"
+                alt="jiva logo"
+              />
+            </div>
+          </div>
+          <div class="about">
+            <div class="aboutwrapper">
+              <h1>About Jiva</h1>
+              <div class="aboutContent">
+                <h3>
+                  Jiva Ayurveda was founded with the mission of 'Taking Ayurveda
+                  to Every Home'. Their objective is to make people happy and
+                  healthy through authentic Ayurvedic treatment delivered at
+                  their doorstep and is a direct response to growing ailments
+                  and disorders such as diabetes, arthritis, asthma, obesity,
+                  hypertension, spondylitis, piles, skin problems, sexual
+                  disorders, etc. Today, Jiva has over 500 Ayurvedic doctors and
+                  support professionals who have provided consultations to more
+                  than one million patients to date across 1800 cities and towns
+                  in India.
+                </h3>
+                <h3>
+                  For millions across the world, Jiva is the first choice for
+                  holistic Ayurvedic treatment that is completely personalized.
+                  Jiva assures highest quality of treatment and care with 25
+                  years of experience. It treats various diseases like Joint
+                  problems, Endocrine disorders, Digestive Disorders, Sexual
+                  Ailments, Neurological Issues, Skin & Hair Problems, Anorectal
+                  Problems, Gynaecological Disorders, Metabolic Disorders,
+                  Respiratory Diseases etc.
+                </h3>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="banner">
+          <div class="banner">
+            <a href="https://www.jiva.com/treatment/video">
+              <img
+                src="https://store.jiva.com/cdn/shop/files/HOMEPAGE_BANNERS_1_6328c79f-a399-4dc9-b5fe-6a7b4faef593.jpg?v=1695201594"
+                alt="jiva products"
+              />
+            </a>
+          </div>
+          <div class="banner_content">
+              <div class="banner_content_head">
+                  <h1>
+                      Circle Health brings discounts for you and your family.
+                    </h1>
+                </div>
+                <div class="banner_content_p" >
+                  <div class="banner_content_p_left">
+                    <ul>
+                      <li>20% off on Consultation.</li>
+                      <li>10% off on Medicines.</li>
+                      <li>5% off on Treatment.</li>
+                    </ul>
+                  </div>
+                  <div class="banner_content_p_right">
+                    <p>
+                      Jiva Ayurveda presents India's 1st Integrated CGM based Diabetes
+                      Management program. This 120 days programme helps to treat diabetes
+                      better with goodness of Ayurveda and the power of Technology. This
+                      program includes 4 months personalised diabetes medicines, Health
+                      consultation by Jiva doctors, Customised diet plan by Certified
+                      Nutritionist, Unlimited Group Yoga Session, Lifetime access to Jiva
+                      Smit.fit app, Dedicated health coach.
+                    </p>
+                  </div>
+                </div>
+          </div>
+          <div class="banner">
+            <a href="https://www.jiva.com/treatment/video">
+              <img
+                src="./assets/MAIN_CATOGERY_-ESSENTIAL.jpg"
+                alt="jiva products"
+              />
+            </a>
+          </div>
+        </section>
+        <section id="packege">
+          <div class="price">
+            <div class="leftCont">
+              <div class="priDis">
+                <h2><em>4 months program @ just Rs 20,000/-</em></h2>
+                <h3>
+                  Special 5% discount for Circle health user.
+                </h3>
+              </div>
+            </div>
+            <div class="rightCont">
+              <img class="diab" src="./assets/earthD.png" alt="vector" />
+            </div>
+          </div>
+        </section>
+        <h1 class="bookingtext">
+          Book your Seat now for the best Natural Diabetes Management Program.
+        </h1>
+        <div class="interested">
+          <button id="interestedButton">
+              Book now
+          </button>
+          <button id="jivabtn">
+            <!-- https://www.jiva.com/diseases-ayurveda/endocrine/diabetes/?utm_source=circlehealth&utm_medium=app&utm_campaign=jivadiabetes -->
+              <a href="https://www.jiva.com/diseases-ayurveda/endocrine/diabetes/?utm_source=circlehealth&utm_medium=app&utm_campaign=jivadiabetes">
+                Visit jiva
+              </a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="imageCont">
+        <div class="imagewrap">
+            <img src="https://www.pacegallery.com/media/images/16_9-2.width-2000.png" alt="Image">
+      </div>
+    </div>
+  
+    <section>
+      <h2>About Us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+      <button id="interestedButton">I am interested</button>
+   </section> -->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script>
+    let patientInfo = ''
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+// Usage example
+document.addEventListener('DOMContentLoaded', function() {
+    var param1Value = getParameterByName('offerid');
+    var param2Value = getParameterByName('patientid');
+
+    if (param1Value) {
+        console.log(param1Value);
+    }
+
+    if (param2Value) {
+        console.log(param2Value);
+    }
+    patientD = {
+      "offerid": param1Value,
+        "patientid": param2Value,
+    }
+    patientInfo = patientD
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Find the button by its ID
+    const interestedButton = document.getElementById('interestedButton');
+    const visitJiva = document.getElementById('jivabtn')
+  
+    // Add a click event listener to the button
+    interestedButton.addEventListener('click', function() {
+        
+        // Function to get URL parameter by name
+  
+      // Make an HTTP POST request to the example API
+      fetch('https://api.circle.care/v1/misc/offers/sendemail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({...patientInfo,
+        "type": "iaminterested"}),
+      })
+      .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        console.log('Post request successful:', data);
+        if(data.status === 1){
+          Swal.fire({
+              icon: "success",
+              title: "Awesome! Your booking is confirmed 🎉",
+              showConfirmButton: false,
+              timer: 2000
+          });
+        }else{
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong! Please try again after sometime. 😓",
+          });
+        }
+        // You can replace this with your own logic
+    })
+    .catch(error => {
+        console.error('Error making post request:', error); // You can replace this with your own error handling
+    });
+    });
+    visitJiva.addEventListener('click', function() {
+        
+        // Function to get URL parameter by name
+  
+      // Make an HTTP POST request to the example API
+      fetch('https://api.circle.care/v1/misc/offers/sendemail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({...patientInfo,
+        "type": "visited"}),
+      })
+      .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        console.log('Post request successful:', data);
+        if(data.status === 1){
+          console.log("success", data)
+        }else{
+          console.log("request failed",data)
+        }
+        // You can replace this with your own logic
+    })
+    .catch(error => {
+        console.error('Error making post request:', error); // You can replace this with your own error handling
+    });
+    });
+
+
+  });
+  
+   </script>
+    <!-- // <script src="./banner.js"></script> -->
+  </body>
+</html>
+
